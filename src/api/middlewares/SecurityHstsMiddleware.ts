@@ -1,6 +1,7 @@
 import * as express from "express";
-import * as helmet from "helmet";
 import { ExpressMiddlewareInterface, Middleware } from "routing-controllers";
+import * as helmet from 'helmet';
+// import helmet = require('helmet');
 
 @Middleware({ type: "before" })
 export class SecurityHstsMiddleware implements ExpressMiddlewareInterface {
@@ -11,7 +12,7 @@ export class SecurityHstsMiddleware implements ExpressMiddlewareInterface {
   ): any {
     return helmet.hsts({
       maxAge: 31536000,
-      includeSubdomains: true
+      includeSubDomains: true
     })(req, res, next);
   }
 }
