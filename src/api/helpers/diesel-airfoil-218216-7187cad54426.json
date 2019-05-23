@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "diesel-airfoil-218216",
+  "private_key_id": "7187cad54426336bdf245783cc436efff5d758bd",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDkFaln/kejyPCr\ncjJqsZ6A/govGnLQTjMa2dLrIJ86c201VuNkkgxjIoQgH6tkckRxkN1fsffLxiw1\ncwq62J3PZA5sH2ts5zeqvgNwVcf7ak/uS7QDY7IlWTBWjf2F7Kblh1YZ37HseKCR\nNhen8Jc7fggI7gcdJD2/QIkuioMgJX9sqAUFlZyJNWh0qmEnygxKL47l1vd12CPF\nU6KhGZ4pKmUY5PubBH7nfAx3IEtP8cWKhnZXx9z2k5ms7jaQujdx5D8Mnea8HJ4/\nAodNd0qp8Ag6+YgFA4PDgIbFtGFGOMcSFjVqNv0X7pIINGBGBKJ7Qu2JfaQWsORB\ncOGBXLp3AgMBAAECggEAUfzPZohrLB7hFF/6a4vplCi9dG0ndGWHzVEbllWlpxcy\n3IedOdueBEy1/e4kZ/kDTWdrjCinEGLuJVBzPPL81z36STeKIB2FTyT6i3jqaB+x\nF9Gypb1CnlZPH+3ugiOtYrihZK+af4xk+43cNwwu8L2/Gaame/05DPSf21EDDZx/\nUK04Z44lxeeb3+PKqgW7Sq1Ebua0k1wyfK6ToXDBpMEhQ7qFa6pfmI0NhkJpXl/Y\nImJJlPM6KVS7dDRIDlZ5SGPjtFQq1n44cV9oTX74m/ugOr5FRWq4AddIVZ8h99jF\nq43ZBFoNcIALgMdRMIiX3WhXfm3938047vlnPv4OcQKBgQD1mC59i2Xakl4tv+nd\nLyXrdyALIygonK1Hw4cBchTCy9XuGDsvE5z29W9zU8n5uMJhokDvKppM28N8AAuL\nlC38wYj6XnEBvncw0mHWHsfRKiQORLRLorlTD8GV+hcSqnu5lzmwWW0V7jV6Ovhz\nILMhbJ40GfsyM7XIbKxOuFaJqwKBgQDtv4+p+1fim4Xcc/IxRuZFYDxne7XVaUC0\nDRbYsOqc16NhG4dAdDG0d7Qp03eIHJKezYjhfONUorQSMJgILGY+ONo8Iv6tG0eB\npBftF5Gci41Wf+dj2wUgjEkOQZyo1elJKCYJz+yMcOJok5ZydhUwZ2ElEt1li1FA\nsGz2fqM+ZQKBgQC3y7oPLoF9P8jHiDZm12AThcUvUJI/QnHToRqqFExBM/bYBr5U\nDuOLVkagEna3MnQWSS07T7DGEDmN1SLOxIhd/iCa7o639WiR2wBpFAQKHvV40CX1\n7MOwy7vel5ko2Pla/TepKGOg4/KVlQhWcIReYUFMUJ1TBqvmYJ3bE81/nQKBgQDk\nhtS+LGXu4VVLcXvk1+Sx3O5S/jvrVg+mwkoqoevyNOjLh917G/VHJiTca3MjN2vM\nD366WARgL0Dtlx4cBSmGN7m2QmEQ3f7e429IK/aARjfmZG1zs2x7O71hYboHJA7o\njhn6Jo2W9U77/JmJjm2RqF1deIOtfrvsdWlXiqS5bQKBgQDh6tCki+C+QabOD68t\nQc9/LLAcYVs/n7LOXciW7ZL9wpWsB9OBLIjQ2QPEhLyqVpnakS3YF0e+1e1yNzFi\n0dwsZ2tXWgf5Li8OiKvEe35fCkCCGBWQ7OSUzl27puj6oDRefLPCIN6cRz9cd3wx\nwJJ0KzA/wmRwwBSaYp3yKWpW7w==\n-----END PRIVATE KEY-----\n",
+  "client_email": "decore-moveis@diesel-airfoil-218216.iam.gserviceaccount.com",
+  "client_id": "116362218875345605692",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/decore-moveis%40diesel-airfoil-218216.iam.gserviceaccount.com"
+}
