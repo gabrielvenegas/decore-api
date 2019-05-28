@@ -9,26 +9,15 @@ export class PaymentService {
 
   async initSession() { }
 
-  async checkout(details: Checkout): Promise<any> {
-    var data = '';
-    data += querystring.stringify(details.items[0]);
-    data += '&' + querystring.stringify(details.sender);
-    data += '&' + querystring.stringify(details.shipping.address);
-
-    // ?email=ged.venegas@gmail.com&token=5EB8EF10AA6B4B07B957A06081F02603
-    Axios.post("https://ws.sandbox.pagseguro.uol.com.br/v2/checkout",
-      data,
+  async checkout(details: string): Promise<any> {
+    return Axios.post("https://ws.pagseguro.uol.com.br/v2/checkout?email=decoremoveis.contato@gmail.com&token=4d2f5d08-72f7-4fd5-bf59-c7edcdb0712da95c380a428f86e8b07077a60757fc952485-ee1d-4dcf-b706-1b1b73aa2e8e",
+      details,
       {
-        // headers: {
-        //   Accept: "application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1",
-        //   "Content-Type": "application/json;charset=ISO-8859-1"
-        // },
-        method: 'POST'
-      }).then(res => {
-        console.log(res);
-      }, err => {
-        console.log(err);
-      })
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/xml; charset=ISO-8859-1"
+        }
+      });
   }
 
   reversal() { }

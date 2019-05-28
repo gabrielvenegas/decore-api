@@ -8,6 +8,8 @@ import {
 } from "routing-controllers";
 import { PaymentService } from "../../lib/payment.service";
 import { Checkout } from '../models/Checkout';
+import * as js2xmlparser from "js2xmlparser";
+import xmlToJson from "xml2json";
 @JsonController("/order")
 export class AuthController {
   constructor(private paymentService: PaymentService) { }
@@ -79,8 +81,13 @@ export class AuthController {
 
   @Post("/checkout")
   async checkout(@Body() checkout: Checkout) {
-    const a = await this.paymentService.checkout(checkout);
-    console.log(a);
-    return Promise.resolve(a);
+    const objXml = js2xmlparser.parse('checkout', checkout, {});
+
+    try {
+      const response = await this.paymentService.checkout(objXml);
+      return JSON.parse(xmlToJson.toJson(response.data));
+    } catch (error) {
+      return error;
+    }
   }
 }
