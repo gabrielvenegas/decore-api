@@ -25,16 +25,22 @@ export class ProductController {
     async getProducts(@QueryParam("idCategory") idCategory?: number) {
         // TODO - Implement active check (must add prop to table)
         if (idCategory)
-            return this.product.find({ where: { category: { id: idCategory } }, relations: ["category", "colors", "photos"] });
+            return this.product.find({ where: { category: { id: idCategory }, active: 1 }, relations: ["category", "colors", "photos"] });
         else
-            return this.product.find({ relations: ["category", "colors", "photos"], order: { createdAt: "DESC" } });
+            return this.product.find({ where: { active: 1 }, relations: ["category", "colors", "photos"], order: { createdAt: "DESC" } });
+    }
+
+    @Get('/spotlight/main')
+    async get(@QueryParam("idCategory") idCategory?: number) {
+        // TODO - Implement active check (must add prop to table)
+        return this.product.find({ where: { spotlight: 1 }, relations: ["category", "colors", "photos"] });
     }
 
     @Post()
     async createProduct(@Body() product: any) {
         product.createdAt = new Date();
         product.updatedAt = new Date();
-        product.category = await this.category.findOne(product.idCategory);
+        product.category = await this.category.findOne(product.category.id);
         product.colors = await this.colors.findByIds(product.colors);
 
         return this.product.save(product);
@@ -45,6 +51,19 @@ export class ProductController {
         product.category = this.category.findOne(product.idCategory);
         return this.product.save(product);
     }
+
+    @Get('/disable/:id')
+    async diableProduct(@Param("id") id: any) {
+        const product = await this.product.findOne(id);
+        product.active = 0;
+        const a = await this.product.save(product);
+        if (a) {
+            return { status: true, message: "Produto desativado com sucesso" };
+        } else {
+            return { status: false, message: "Ocorreu algum erro inesperado" };
+        }
+    }
+
 
     @Get("/:id")
     async getProduct(@Param("id") id: number) {

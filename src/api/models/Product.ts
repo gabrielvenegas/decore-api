@@ -30,6 +30,10 @@ export class Product extends BaseModel {
     width: number;
     @Column({ default: 1 })
     active: number;
+    @Column({ default: 0 })
+    spotlight: number;
+    @Column()
+    description: string;
 
     @ManyToOne(type => Category, category => category.products)
     @JoinColumn({ name: 'idCategory' })
