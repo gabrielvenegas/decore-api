@@ -34,7 +34,7 @@
     "nodemon": "^1.12.1",
     "path": "^0.12.7",
     "querystring": "^0.2.0",
-    "redis": "^2.8.0",
+    "redis": "^3.1.1",
     "reflect-metadata": "^0.1.10",
     "request": "^2.88.0",
     "routing-controllers": "^0.7.6",
